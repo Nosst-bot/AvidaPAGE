@@ -1,3 +1,7 @@
+/*.container1 {
+  padding-top: 50px;
+} */
+
 .container-espacio {
   margin-top: 70px;
 }
@@ -25,7 +29,7 @@
   margin-right: 20px;
 }
 
-.download-button {
+.style-button {
   display: block;
   width: 150px;
   height: 50px;

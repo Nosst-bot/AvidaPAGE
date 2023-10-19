@@ -1,31 +1,66 @@
-.login-container {
+/* loginform.css */
+
+.background-container {
+  background-image: url('../../assets/img/loggedppl.avif');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.form-content {
-  flex: 2;
+.loginform-row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loginform-col-md-6 {
+  flex: 0 0 200px;
   padding: 20px;
-}
-
-.image-content {
-  flex: 1;
-}
-
-.form-content {
-  background-color: #f7f7f7;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.image-content {
   text-align: center;
-  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
-.image-content img {
-  max-width: 100%;
-  height: auto;
+.loginform-col-md-6-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginform-custom-option ul {
+  list-style: none;
+}
+
+.loginform-custom-option li {
+  margin: 10px;
+}
+
+.loginform-col-md-6-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-input {
+  width: 100%;
+}
+
+.loginform-custom-btn,
+.loginform-custom-btn-registro,
+.loginform-custom-btn-inicio-sesion {
+  width: 100%;
   border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
 }

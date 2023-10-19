@@ -4,7 +4,7 @@ import './conecta.css';
 
 const Conecta = () => {
   return (
-    <div className='container1'>
+    <div className='container container-espacio'>
       <div className='row'>
         <div className='col-md-6 flex-column justify-content-center'>
           <h1 className='conecta-title mb-3 align-self-start'>
@@ -33,7 +33,7 @@ const Conecta = () => {
             className='img-fluid conecta-image'
           />
         </div>
-        <button className='download-button'>Descargar</button>
+        <button className='style-button'>Descargar</button>
       </div>
       <div className='section-divider'></div>
     </div>

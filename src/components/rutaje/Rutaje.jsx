@@ -32,7 +32,7 @@ function Rutaje() {
       </div>
       <div className='row'>
         <div className='col-md-12 text-center'>
-          <button className='ruta-button'>Ver rutas</button>
+          <button className='style-button button-space'>Ver rutas</button>
         </div>
       </div>
       <div className='section-divider'></div>
