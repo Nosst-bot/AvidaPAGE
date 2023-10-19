@@ -20,3 +20,7 @@
   border: 2px solid #fff;
   margin: 20px 0;
 }
+
+.row img {
+  border-radius: 10px;
+}

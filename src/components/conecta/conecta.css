@@ -1,5 +1,5 @@
-.container1 {
-  padding-top: 50px;
+.container-espacio {
+  margin-top: 70px;
 }
 
 .conecta-title {
@@ -19,7 +19,7 @@
 }
 
 .conecta-image {
-  max-width: 40%;
+  max-width: 60%;
   margin-top: auto;
   margin-left: auto;
   margin-right: 20px;

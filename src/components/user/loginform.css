@@ -1,0 +1,31 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-content {
+  flex: 2;
+  padding: 20px;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.form-content {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
