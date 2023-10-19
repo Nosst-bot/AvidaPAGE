@@ -1,25 +1,31 @@
 /* loginform.css */
 
-.loginform-container {
+.background-container {
+  background-image: url('../../assets/img/loggedppl.avif');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   display: flex;
   align-items: center;
-  height: 100vh;
-  padding: 20px;
+  justify-content: center;
 }
 
 .loginform-row {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .loginform-col-md-6 {
-  flex: 1;
+  flex: 0 0 200px;
   padding: 20px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 10px;
+  background-color: #fff;
 }
 
 .loginform-col-md-6-options {
@@ -37,24 +43,23 @@
   margin: 10px;
 }
 
-.loginform-custom-btn {
-  width: 200px;
-  display: inline;
+.loginform-col-md-6-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-input {
+  width: 100%;
+}
+
+.loginform-custom-btn,
+.loginform-custom-btn-registro,
+.loginform-custom-btn-inicio-sesion {
+  width: 100%;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-}
-
-.loginform-custom-btn-registro {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-}
-
-.loginform-custom-btn-inicio-sesion {
   background-color: #007bff;
   color: #fff;
   border: none;

@@ -27,9 +27,9 @@
   border: none;
   border-radius: 5px;
   position: absolute;
-  left: 25%;
+  /*  left: 25%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
   cursor: pointer;
 }
 
@@ -40,4 +40,19 @@
 .section-divider {
   border: 2px solid #fff;
   margin: 40px 0;
+}
+
+.custom-text-2 {
+  font-family: var(--primerafuente);
+  font-weight: 500;
+  font-size: 80px;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+/* Agregado */
+.custom-space {
+  padding-left: 10%;
+  padding-top: 180px;
 }

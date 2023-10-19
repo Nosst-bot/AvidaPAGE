@@ -9,6 +9,7 @@ import Crearuta from '../../components/crearuta/Crearuta';
 import Rutaje from '../../components/rutaje/Rutaje';
 import Guia from '../../components/guia/Guia';
 import Tienda from '../../components/tienda/Tienda';
+import Footer from '../footer/Footer';
 
 function Landing() {
   return (
@@ -21,6 +22,7 @@ function Landing() {
       <Guia />
       <Comunidad />
       <Tienda />
+      <Footer />
     </div>
   );
 }
