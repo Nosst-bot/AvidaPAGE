@@ -19,8 +19,15 @@
 
 .custom-text {
   font-family: var(--primerafuente);
+  font-weight: 500;
+  font-size: 100px;
 }
 
 .lead {
   font-family: var(--segundafuente);
+}
+
+.custom-p {
+  font-size: 30px;
+  font-weight: 400;
 }

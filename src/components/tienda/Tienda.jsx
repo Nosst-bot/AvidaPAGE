@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './tienda.css';
 
 import tiendaP from '../../assets/img/tienda.png';
@@ -12,7 +13,9 @@ function Tienda() {
           alt='Imagen de la tienda'
           className='imagen-tienda'
         />
-        <button className='boton-centrado'>Tienda</button>
+        <Link to='/Tienda'>
+          <button className='boton-centrado'>Tienda</button>
+        </Link>
       </div>
       <div className='section-divider'></div>
     </div>
