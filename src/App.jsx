@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './components/landing/Landing';
 import Store from './components/tienda/Ecommerce';
 import NotFound from './components/error/Error404';
-import Comentarios from './admin/Comentarios';
+
 import RegisForm from './components/user/RegisForm';
 import LoginForm from './components/user/LoginForm';
 import Comuland from './components/landing/Comuland';
 import Guialand from './components/landing/Guialand';
+import Usuarios from './admin/Usuarios';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path='/loginform' element={<LoginForm />} />
         <Route path='/regisform' element={<RegisForm />} />
         <Route path='*' element={<NotFound />} />{' '}
-        <Route path='/comentarios' element={<Comentarios />} />
+        <Route path='/usuarios' element={<Usuarios />} />
       </Routes>
     </Router>
   );

@@ -5,12 +5,8 @@
   --verde: #8d9f6f;
   --verdeLimon: #929747;
   --verdeOscuro: #52662b;
-  --primerafuente: 'Quicksand', sans-serif;
-  --segundafuente: 'Montserrat', sans-serif;
-}
-
-.container {
-  margin-top: 20px;
+  --primerafuente: "Quicksand", sans-serif;
+  --segundafuente: "Montserrat", sans-serif;
 }
 
 .card {
@@ -32,4 +28,11 @@
 .btn-primary:hover {
   background-color: var(--verde);
   color: #fff;
+}
+
+.espacio-tienda {
+  padding: 130px 0 100px 0;
+}
+.espacio-h2 {
+  padding-bottom: 40px;
 }

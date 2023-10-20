@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
-import { Container, Card, Button } from 'react-bootstrap';
-import fototaza from './imgecommerce/producto1.jpg';
-import './ecommerce.css';
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
+import React, { useState } from "react";
+import { Container, Card, Button } from "react-bootstrap";
+import "./ecommerce.css";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
+import tazaImage from "./imgecommerce/producto1.jpg";
+import agendaImage from "./imgecommerce/agenda.png";
+import bolsaImage from "./imgecommerce/bolsa.png";
+import gorroImage from "./imgecommerce/gorro.png";
+import lentesImage from "./imgecommerce/lentes.png";
+import llaveroImage from "./imgecommerce/llavero.png";
+import mochilaImage from "./imgecommerce/mochila.png";
+import morralImage from "./imgecommerce/morral.png";
+import poleraImage from "./imgecommerce/polera.png";
+import poleronImage from "./imgecommerce/poleron.png";
+import producto2Image from "./imgecommerce/producto2.png";
+import lanaImage from "./imgecommerce/lana.png";
 const ProductList = () => {
   const [cart, setCart] = useState([]);
 
@@ -17,37 +28,38 @@ const ProductList = () => {
   };
 
   const products = [
-    { id: 1, name: 'Taza', price: 5000 },
-    { id: 2, name: 'Taza2', price: 5000 },
-    { id: 3, name: 'Taza3', price: 5000 },
-    { id: 4, name: 'Taza4', price: 5000 },
-    { id: 5, name: 'Taza5', price: 5000 },
-    { id: 6, name: 'Taza6', price: 5000 },
-    { id: 7, name: 'Taza7', price: 5000 },
-    { id: 8, name: 'Taza8', price: 5000 },
-    { id: 9, name: 'Taza9', price: 5000 },
-    { id: 10, name: 'Taza10', price: 5000 },
-    { id: 11, name: 'Taza11', price: 5000 },
-    { id: 12, name: 'Taza12', price: 5000 },
+    { id: 1, name: "Taza", price: 5000, image: tazaImage },
+    { id: 2, name: "Agenda", price: 5000, image: agendaImage },
+    { id: 3, name: "Bolsa", price: 5000, image: bolsaImage },
+    { id: 4, name: "Gorro", price: 5000, image: gorroImage },
+    { id: 5, name: "Lentes", price: 5000, image: lentesImage },
+    { id: 6, name: "Llavero", price: 5000, image: llaveroImage },
+    { id: 7, name: "Mochila", price: 5000, image: mochilaImage },
+    { id: 8, name: "Morral", price: 5000, image: morralImage },
+    { id: 9, name: "Polera", price: 5000, image: poleraImage },
+    { id: 10, name: "Polerón", price: 5000, image: poleronImage },
+    { id: 11, name: "Botellas de Vidrio", price: 5000, image: producto2Image },
+    { id: 12, name: "Gorro de Lana", price: 5000, image: lanaImage },
   ];
 
   return (
     <>
       <Header />
 
-      <Container>
-        <div className='d-flex flex-wrap justify-content-between'>
+      <Container className="espacio-tienda">
+        <h2 className="espacio-h2">Bienvenidos a Ávida Store</h2>
+        <div className="d-flex flex-wrap justify-content-between">
           {products.map((product) => (
             <Card
               key={product.id}
-              style={{ width: '18rem', marginBottom: '20px' }}
+              style={{ width: "18rem", marginBottom: "20px" }}
             >
-              <Card.Img variant='top' src={fototaza} alt={product.name} />
+              <Card.Img variant="top" src={product.image} alt={product.name} />
               <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>{formatPrice(product.price)}</Card.Text>
                 <Button
-                  variant='primary'
+                  variant="primary"
                   onClick={() => handleAddToCart(product)}
                 >
                   Agregar al carrito
