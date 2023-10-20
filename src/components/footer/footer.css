@@ -29,3 +29,17 @@
 .icono {
   border-radius: 0%;
 }
+
+.ajustes {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.ajuste-footer {
+  text-align: left;
+}
+.ajustes-iconos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}

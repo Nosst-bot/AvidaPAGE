@@ -44,7 +44,19 @@
   margin-top: 10px;
   cursor: pointer;
 }
-.section-divider {
-  border: 2px solid #fff;
-  margin: 20px 0;
+
+.style-button:hover {
+  background-color: #45a049;
+}
+
+.divider-center {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.section-verde {
+  border: 2px solid var(--verde);
+  margin: 40px 0;
+  width: 150px;
 }
