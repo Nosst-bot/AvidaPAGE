@@ -14,7 +14,7 @@ import Footer from '../footer/Footer';
 function Landing() {
   return (
     <div className='app-container'>
-      <Header />
+      <Header rol={"usuario"}/>
       <Home />
       <Conecta />
       <Crearuta />
