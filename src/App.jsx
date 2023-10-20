@@ -6,6 +6,7 @@ import NotFound from './components/error/Error404';
 import Usuarios from './admin/Usuarios';
 import RegisForm from './components/user/RegisForm';
 import LoginForm from './components/user/LoginForm';
+import EditarUsuario from './components/user/EditarUsuario';
 import Comuland from './components/landing/Comuland';
 import Guialand from './components/landing/Guialand';
 
