@@ -3,94 +3,105 @@ import axios from 'axios';
 import './regisform.css';
 
 function RegisForm() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [birthday, setBirthday] = useState('');
+  const URL_API_REGISTER = 'http://localhost:8005/api/usuarios/nuevo';
 
-  const handleRegistro = async (e) => {
+  const [data, setData] = useState({
+    nombre: '',
+    apellido: '',
+    username: '',
+    email: '',
+    password: '',
+  });
+
+  function handleRegistro(e) {
+    const newData = { ...data };
+    newData[e.target.id] = e.target.value;
+    setData(newData);
+  }
+
+  function submitForm(e) {
     e.preventDefault();
-
-    const userData = {
-      firstName,
-      lastName,
-      email,
-      password,
-      birthday,
-    };
-
-    const URL_API_REGISTER = "http://localhost:8005/api/usuarios/nuevo"
-
-    try {
-      const response = await axios.post(URL_API_REGISTER, userData);
-
-      console.log('Usuario registrado con éxito', response.data);
-    } catch (error) {
-      console.error('Error al registrar usuario', error);
-    }
-  };
+    axios.post(URL_API_REGISTER, {
+      nombre: data.nombre,
+      apellido: data.apellido,
+      username: '@'+data.username,
+      email: data.email,
+      password: data.password,
+    })
+    .then(res => {
+      console.log(res.data);
+    })
+  }
 
   return (
-    <div className='formregis-background'>
-      <div className='registration-form'>
+    <div className="formregis-background">
+      <div className="registration-form">
         <h1>Regístrate en Ávida 🌳</h1> {/* Encabezado dentro del formulario */}
-        <form onSubmit={handleRegistro}>
-          <div className='form-group'>
-            <div className='form-row'>
-              <div className='col'>
+        <form onSubmit={(e) => submitForm(e)}>
+          <div className="form-group">
+            <div className="form-row">
+              <div className="col">
                 <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Nombre'
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  id="nombre"
+                  type="text"
+                  className="form-control"
+                  placeholder="Nombre"
+                  value={data.nombre}
+                  onChange={(e) => handleRegistro(e)}
                   required
                 />
               </div>
-              <div className='col'>
+              <div className="col">
                 <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Apellido'
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  id="apellido"
+                  type="text"
+                  className="form-control"
+                  placeholder="Apellido"
+                  value={data.apellido}
+                  onChange={(e) => handleRegistro(e)}
                   required
                 />
               </div>
             </div>
           </div>
-          <div className='form-group'>
+          <div className="form-group">
             <input
-              type='email'
-              className='form-control'
-              placeholder='Correo Electrónico'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              id="email"
+              type="email"
+              className="form-control"
+              placeholder="Correo Electrónico"
+              value={data.email}
+              onChange={(e) => handleRegistro(e)}
               required
             />
           </div>
-          <div className='form-group'>
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">
+              @
+            </span>
             <input
-              type='password'
-              className='form-control'
-              placeholder='Contraseña'
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
+              id="username"
+              type="text"
+              className="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              onChange={(e) => handleRegistro(e)}
             />
           </div>
-          <div className='form-group'>
-            <label>Fecha de Nacimiento</label>
+          <div className="form-group">
             <input
-              type='date'
-              className='form-control'
-              value={birthday}
-              onChange={(e) => setBirthday(e.target.value)}
+              id="password"
+              type="password"
+              className="form-control"
+              placeholder="Contraseña"
+              value={data.password}
+              onChange={(e) => handleRegistro(e)}
+              required
             />
           </div>
 
-          <button type='submit' className='btn btn-primary'>
+          <button type="submit" className="btn btn-primary">
             Registrarse
           </button>
         </form>
