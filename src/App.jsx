@@ -15,12 +15,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/tienda" element={<Store />} />
-        <Route path="/loginform" element={<LoginForm />} />
-        <Route path="/regisform" element={<RegisForm />} />
-        <Route path="*" element={<NotFound />} />{' '}
-        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/comunidad' element={<Comuland />} />
+        <Route path='/guia' element={<Guialand />} />
+        <Route path='/tienda' element={<Store />} />
+        <Route path='/loginform' element={<LoginForm />} />
+        <Route path='/regisform' element={<RegisForm />} />
+        <Route path='*' element={<NotFound />} />{' '}
+        <Route path='/usuarios' element={<Usuarios />} />
         <Route path="/edituser/:id" element={<EditarUsuario />} />
       </Routes>
     </Router>
