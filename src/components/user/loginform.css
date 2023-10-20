@@ -1,66 +1,54 @@
-/* loginform.css */
-
-.background-container {
-  background-image: url('../../assets/img/loggedppl.avif');
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+.login-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.loginform-row {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
 }
 
-.loginform-col-md-6 {
-  flex: 0 0 200px;
+.login-box {
+  background-color: #fff;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   padding: 20px;
   text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #fff;
 }
 
-.loginform-col-md-6-options {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.login-box h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.loginform-custom-option ul {
-  list-style: none;
-}
-
-.loginform-custom-option li {
-  margin: 10px;
-}
-
-.loginform-col-md-6-fields {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.custom-input {
+.login-box input {
   width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
 }
 
-.loginform-custom-btn,
-.loginform-custom-btn-registro,
-.loginform-custom-btn-inicio-sesion {
-  width: 100%;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #007bff;
+.login-box button {
+  background-color: #1877f2;
   color: #fff;
   border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-box button:hover {
+  background-color: #166fe5;
+}
+
+.login-box p {
+  text-align: center;
+  color: #1877f2;
+  cursor: pointer;
+}
+
+.login-box p:hover {
+  text-decoration: underline;
 }
