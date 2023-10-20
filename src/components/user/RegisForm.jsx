@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './regisform.css';
+import { useNavigate } from 'react-router-dom';
 
 function RegisForm() {
   const URL_API_REGISTER = 'http://localhost:8005/api/usuarios/nuevo';
+
+  let navigate = useNavigate();
 
   const [data, setData] = useState({
     nombre: '',
@@ -31,6 +34,8 @@ function RegisForm() {
     .then(res => {
       console.log(res.data);
     })
+    setTimeout(()=> navigate("/usuarios"),3000)
+    
   }
 
   return (
