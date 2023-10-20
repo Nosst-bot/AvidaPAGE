@@ -5,6 +5,9 @@ import './conecta.css';
 const Conecta = () => {
   return (
     <div className='container container-espacio'>
+      <div className='divider-center'>
+        <div className='section-verde'></div>
+      </div>
       <div className='row'>
         <div className='col-md-6 flex-column justify-content-center'>
           <h1 className='conecta-title mb-3 align-self-start'>
@@ -35,7 +38,9 @@ const Conecta = () => {
         </div>
         <button className='style-button'>Descargar</button>
       </div>
-      <div className='section-divider'></div>
+      <div className='divider-center'>
+        <div className='section-verde'></div>
+      </div>
     </div>
   );
 };

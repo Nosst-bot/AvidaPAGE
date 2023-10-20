@@ -8,7 +8,9 @@ import imgface from './footerimg/facebook.png';
 const Footer = () => {
   return (
     <div className='container-footer'>
+
       <footer className='row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top'>
+
         <div className='col mb-3'>
           <img src={logo} alt='Logo-Ávida' className='logo' />
         </div>
@@ -17,6 +19,7 @@ const Footer = () => {
           <ul className='nav flex-column'>
             <li className='nav-item mb-2'>
               <a href='#' className='nav-link p-0 text-body-secondary'>
+
                 Inicio
               </a>
             </li>
@@ -34,7 +37,8 @@ const Footer = () => {
         </div>
 
         <div className='col mb-3'>
-          <ul className='nav flex-column'>
+
+          <ul className='nav flex-column ajuste-footer'>
             <li className='nav-item mb-2'>
               <a href='#' className='nav-link p-0 text-body-secondary'>
                 Guía
@@ -53,7 +57,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='col mb-3'>
+        <div className='col mb-3 ajustes-iconos'>
           <img src={imgface} alt='Logo-Facebook' className='icono_footer' />
           <img src={imginsta} alt='Logo-Instagram' className='icono_footer' />
           <img src={imgemail} alt='Logo-email' className='icono_footer' />

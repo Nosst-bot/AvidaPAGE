@@ -15,7 +15,6 @@ function Guia() {
         </div>
       </div>
       <div className='guia-button'></div>
-      <div className='section-divider'></div>
     </div>
   );
 }

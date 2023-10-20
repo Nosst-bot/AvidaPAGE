@@ -12,6 +12,7 @@ function App() {
   return (
     <Router>
       <Routes>
+
         <Route path="/" element={<Landing />} />
         <Route path="/tienda" element={<Store />} />
         <Route path="/loginform" element={<LoginForm />} />

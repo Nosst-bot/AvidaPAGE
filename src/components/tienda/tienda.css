@@ -2,34 +2,36 @@
 
 .tienda-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
-.imagen-y-botones {
-  position: relative;
+.tienda-image {
+  /*Agregar img*/
+  background-image: url('../../assets/img/tienda.png');
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  text-align: center;
+  height: 100%;
+  position: relative;
 }
-
-.imagen-tienda {
-  max-width: 100%;
-}
-
-.boton-centrado {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+.ver-tienda-button {
+  display: block;
+  width: 150px;
+  height: 50px;
   background-color: var(--verde);
-  color: #fff;
-  padding: 10px 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 50px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  position: absolute;
+  cursor: pointer;
 }
 
-.section-divider {
-  border: 2px solid #fff;
-  margin: 40px 0;
+.ver-tienda-button:hover {
+  background-color: #45a049;
 }
