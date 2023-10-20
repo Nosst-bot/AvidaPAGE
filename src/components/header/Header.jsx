@@ -40,7 +40,7 @@ const Header = () => {
               <Nav.Link as={Link} to='/mapa1'>
                 Mapa
               </Nav.Link>
-              <Nav.Link as={Link} to='/guía'>
+              <Nav.Link as={Link} to='/guia'>
                 Guía
               </Nav.Link>
               <Nav.Link as={Link} to='/tienda'>

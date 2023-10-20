@@ -1,16 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../App.css';
-import Comu1 from '../comunidad/comuhome/Comu1';
 import Header from '../header/Header';
-import Comu2 from '../comunidad/comuconecta/Comu2';
+import Comuhome from '../comunidad/comuhome/Comuhome';
+import Comucone from '../comunidad/comucone/Comucone';
+import Comuruta from '../comunidad/comuruta/Comuruta';
+import Comunos from '../comunidad/comunos/Comunos';
 
 function Comuland() {
   return (
     <div className='app-container'>
       <Header />
-      <Comu1 />
-      <Comu2 />
+      <Comuhome />
+      <Comucone />
+      <Comuruta />
+      <Comunos />
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React from 'react';
-import './comu2.css';
+import './Comucone.css';
+import comuconecta from '/src/assets/img/mnature.png';
 
-const Comu2 = () => {
+const Comucone = () => {
   return (
     <div className='container container-espacio'>
       <div className='row'>
@@ -20,11 +21,17 @@ const Comu2 = () => {
             proteger nuestro planeta.
           </p>
         </div>
-        <div className='col-md-6'></div>
+        <div className='col-md-6'>
+          <img
+            src={comuconecta}
+            alt='Descripción de la imagen'
+            className='img-fluid conecta-image'
+          />
+        </div>
       </div>
       <div className='section-divider'></div>
     </div>
   );
 };
 
-export default Comu2;
+export default Comucone;
