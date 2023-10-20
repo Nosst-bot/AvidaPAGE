@@ -20,8 +20,10 @@ function RegisForm() {
       birthday,
     };
 
+    const URL_API_REGISTER = "http://localhost:8005/api/usuarios/nuevo"
+
     try {
-      const response = await axios.post('URL_DEL_API', userData);
+      const response = await axios.post(URL_API_REGISTER, userData);
 
       console.log('Usuario registrado con éxito', response.data);
     } catch (error) {
