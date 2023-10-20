@@ -1,64 +1,82 @@
-import React, { useState } from 'react';
 import axios from 'axios';
-import './regisform.css';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
-function RegisForm() {
-  const URL_API_REGISTER = 'http://localhost:8005/api/usuarios/nuevo';
+export default function EditarUsuario() {
+  let navigate = useNavigate();
 
-  const [data, setData] = useState({
+  const { id } = useParams();
+  const [usuario, setUsuario] = useState({
     nombre: '',
     apellido: '',
-    username: '',
     email: '',
+    username: '',
     password: '',
   });
 
-  function handleRegistro(e) {
-    const newData = { ...data };
-    newData[e.target.id] = e.target.value;
-    setData(newData);
-  }
+  const onInputChange = (e) => {
+    setUsuario({
+      ...usuario,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  function submitForm(e) {
+  const submitModificar = async (e) => {
     e.preventDefault();
-    axios.post(URL_API_REGISTER, {
-      nombre: data.nombre,
-      apellido: data.apellido,
-      username: '@'+data.username,
-      email: data.email,
-      password: data.password,
-    })
-    .then(res => {
-      console.log(res.data);
-    })
-  }
+    await axios.put(
+      `http://localhost:8005/api/usuarios/modificar/${id}`,
+      usuario
+    );
+    navigate('/usuarios');
+  };
+
+  useEffect(() => {
+    async function loadUserData() {
+      try {
+        const result = await axios.get(
+          `http://localhost:8005/api/usuarios/ver/${id}`
+        );
+        const userData = result.data;
+
+        // Quita el símbolo "@" del username
+        userData.username = userData.username.slice(1);
+        setUsuario(userData);
+      } catch (error) {
+        console.error('Error al cargar datos del usuario', error);
+      }
+    }
+
+    loadUserData();
+  }, [id]);
 
   return (
     <div className="formregis-background">
       <div className="registration-form">
-        <h1>Regístrate en Ávida 🌳</h1> {/* Encabezado dentro del formulario */}
-        <form onSubmit={(e) => submitForm(e)}>
+        <h1>Editar usuario 🌳</h1> {/* Encabezado dentro del formulario */}
+        <form onSubmit={(e) => submitModificar(e)}>
           <div className="form-group">
             <div className="form-row">
               <div className="col">
                 <input
                   id="nombre"
+                  name="nombre"
                   type="text"
                   className="form-control"
                   placeholder="Nombre"
-                  value={data.nombre}
-                  onChange={(e) => handleRegistro(e)}
+                  value={usuario.nombre}
+                  onChange={(e) => onInputChange(e)}
                   required
                 />
               </div>
               <div className="col">
                 <input
                   id="apellido"
+                  name="apellido"
                   type="text"
                   className="form-control"
                   placeholder="Apellido"
-                  value={data.apellido}
-                  onChange={(e) => handleRegistro(e)}
+                  value={usuario.apellido}
+                  onChange={(e) => onInputChange(e)}
                   required
                 />
               </div>
@@ -67,11 +85,12 @@ function RegisForm() {
           <div className="form-group">
             <input
               id="email"
+              name="email"
               type="email"
               className="form-control"
               placeholder="Correo Electrónico"
-              value={data.email}
-              onChange={(e) => handleRegistro(e)}
+              value={usuario.email}
+              onChange={(e) => onInputChange(e)}
               required
             />
           </div>
@@ -81,33 +100,34 @@ function RegisForm() {
             </span>
             <input
               id="username"
+              name="username"
               type="text"
               className="form-control"
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-              onChange={(e) => handleRegistro(e)}
+              value={usuario.username}
+              onChange={(e) => onInputChange(e)}
             />
           </div>
           <div className="form-group">
             <input
               id="password"
+              name="password"
               type="password"
               className="form-control"
               placeholder="Contraseña"
-              value={data.password}
-              onChange={(e) => handleRegistro(e)}
+              value={usuario.password}
+              onChange={(e) => onInputChange(e)}
               required
             />
           </div>
 
           <button type="submit" className="btn btn-primary">
-            Registrarse
+            Editar usuario
           </button>
         </form>
       </div>
     </div>
   );
 }
-
-export default RegisForm;
