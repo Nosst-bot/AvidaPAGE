@@ -2,14 +2,19 @@ body {
   background-color: #fff;
 }
 
-/* colores del nav */
+.custom-micuenta {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 .navbar.fixed-top {
   margin-top: 0;
 }
 .bg-green {
   background-color: var(--verdeOscuro);
 }
-/* Textos del nav */
+
 .nav-link {
   color: white !important;
 }
